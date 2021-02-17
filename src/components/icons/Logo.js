@@ -1,9 +1,9 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDesktop } from '@fortawesome/free-solid-svg-icons'
-
-export const Logo = ({ size }) => {
+export const Logo = () => {
     return (
-        <FontAwesomeIcon icon={faDesktop} size={`${size}x`} />
+        <div className="flex flex-row items-center space-x-2">
+            <h1 className="">browserOS</h1>
+            <div className="w-3 h-3 bg-green-200 rounded-full"></div>
+        </div>
     )
 }
 
