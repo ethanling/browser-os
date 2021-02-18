@@ -1,13 +1,35 @@
-import DockIcon from './DockIcon'
+import DockIcon from "./DockIcon";
 
-export default function Dock({ children }) {
+export default function Dock() {
+    const iconSize = 3;
+
     return (
-        <div className="absolute flex flex-row items-center justify-center p-4 bg-gray-400 shadow-xl ring-1 ring-black ring-opacity-5 bg-opacity-60 space-x-4 bottom-4 rounded-2xl">
-            <DockIcon bgColor="bg-red-600" name="Info"/>
-            <DockIcon bgColor="bg-blue-400" name="Twitter"/>
-            <DockIcon bgColor="bg-gray-600" name="Github"/>
-            <DockIcon bgColor="bg-purple-600" name="Photos"/>
-            <DockIcon bgColor="bg-green-600" name="Settings"/>
+        <div className="absolute flex flex-row items-center justify-center w-auto p-4 overflow-x-auto bg-gray-400 shadow-xl ring-1 ring-black ring-opacity-5 bg-opacity-60 space-x-4 bottom-4 rounded-2xl">
+            <DockIcon 
+                bgColor="bg-red-600" 
+                name="About" 
+                iconSize={iconSize}
+            />
+            <DockIcon
+                bgColor="bg-blue-400"
+                name="Twitter"
+                iconSize={iconSize}
+            />
+            <DockIcon
+                bgColor="bg-gray-600" 
+                name="Github" 
+                iconSize={iconSize} 
+            />
+            <DockIcon
+                bgColor="bg-purple-600"
+                name="Photos"
+                iconSize={iconSize}
+            />
+            <DockIcon
+                bgColor="bg-green-600"
+                name="Settings"
+                iconSize={iconSize}
+            />
         </div>
-    )
+    );
 }

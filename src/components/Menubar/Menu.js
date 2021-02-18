@@ -1,6 +1,14 @@
-export default function Menu({ shown }) {
+import { useState, useEffect } from 'react'
+
+export default function Menu({ shown, direction }) {
+  const [side, setSide] = useState('left')
+  
+  useEffect(() => {
+    direction === 'left' ? setSide('left') : setSide('right')
+  }, [direction])
+
   return (
-    <div className={`absolute ${shown ? 'opacity-100' : 'opacity-0 '} transition-all ease-linear delay-100 left-0 w-56 bg-gray-600 shadow-xl origin-top-right rounded-b-md ring-1 ring-black ring-opacity-5`}>
+    <div className={`absolute ${shown ? 'opacity-100' : 'opacity-0 '} transition-all ease-linear delay-100 ${side}-0 w-56 bg-gray-600 shadow-xl origin-top-right rounded-b-md ring-1 ring-black ring-opacity-5`}>
       <div
         className="py-1"
         role="menu"

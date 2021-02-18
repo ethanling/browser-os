@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Button from './Button'
 import Menu from './Menu'
 
-export default function MenuItem() {
+export default function MenubarItem({title, menuPos}) {
     const [menuShown, setMenuShown] = useState(false)
 
     const toggle = () => {
@@ -11,8 +11,8 @@ export default function MenuItem() {
 
     return (
         <div className="relative inline-block text-left">
-            <Button title="File" active={menuShown} action={toggle}/>
-            <Menu shown={menuShown} />
+            <Button title={title} active={menuShown} action={toggle}/>
+            <Menu shown={menuShown} direction={menuPos}/>
         </div>
     )
 }

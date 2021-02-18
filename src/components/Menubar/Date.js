@@ -6,11 +6,11 @@ export default function Data() {
 
     useInterval(() => {
         const options = { weekday: 'short', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }; 
-        const currentTime = new Date().toLocaleString('en-US', options)
+        const currentTime = new Date().toLocaleString('en-US', options).split(',').join('')
         setTime(currentTime) 
     })
 
     return (
-        <div className="text-gray-100">{time}</div>
+        <div className="text-sm text-gray-100">{time}</div>
     )
 }

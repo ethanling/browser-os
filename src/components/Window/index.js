@@ -2,8 +2,12 @@ import { motion, useDragControls } from "framer-motion";
 import Content from "./Content";
 import Titlebar from "./Titlebar";
 
-export default function Window({ title }) {
+export default function Window({ title, children, titleBarShown }) {
     const dragControls = useDragControls();
+    const variants = {
+        visible: { opacity: 1 },
+        hidden: { opacity: 0 },
+    };
 
     function onDragStart(e, info) {
         // We will ignore the request to drag if it's not coming from the handle
@@ -17,17 +21,18 @@ export default function Window({ title }) {
 
     return (
         <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={variants}
             drag
             dragControls={dragControls}
             onDragStart={onDragStart}
             className="w-9/12 shadow-xl"
         >
-            <span className="bg-yellow-900 drag-handle">
-                <Titlebar title={title}/>
+            <span className="drag-handle">
+                <Titlebar title={title} />
             </span>
-            <Content>
-                <p>This is some content</p>
-            </Content>
+            <Content>{children}</Content>
         </motion.div>
     );
 }
