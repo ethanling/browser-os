@@ -2,7 +2,12 @@ import { motion, useDragControls } from "framer-motion";
 import Content from "./Content";
 import Titlebar from "./Titlebar";
 
-export default function Window({ title, children, titleBarShown }) {
+// PROPS:
+// title: String, Title of the Window
+// children: function, Components to be shown inside of the window.
+// titleBarShown: boolean, Option to hide Titlebar. Default: true
+// width: Option to change window width on render. Default: 9/12
+export default function Window({ title, children, titleBarShown, width }) {
     const dragControls = useDragControls();
     const variants = {
         visible: { opacity: 1 },
@@ -30,9 +35,11 @@ export default function Window({ title, children, titleBarShown }) {
             className="w-9/12 shadow-xl"
         >
             <span className="drag-handle">
-                <Titlebar title={title} />
+                { titleBarShown ? (
+                    <Titlebar title={title} />
+                ) : ('') }
             </span>
-            <Content>{children}</Content>
+            <Content titleBarShown={titleBarShown}>{children}</Content>
         </motion.div>
     );
 }
