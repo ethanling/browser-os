@@ -5,9 +5,11 @@ import Twitter from "../icons/Twitter";
 import Github from "../icons/Github";
 import Settings from "../icons/Settings";
 import Photos from "../icons/Photos";
+import Spotify from '../icons/Spotify';
 
 const iconSet = [
    { name: "About", icon: About },
+   { name: "Spotify", icon: Spotify},
    { name: "Github", icon: Github },
    { name: "Twitter", icon: Twitter },
    { name: "Photos", icon: Photos },

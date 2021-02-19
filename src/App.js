@@ -8,6 +8,7 @@ const About = lazy(() => import("./apps/About/index.js"));
 const Twitter = lazy(() => import("./apps/Twitter/index.js"));
 const Github = lazy(() => import("./apps/Github/index.js"));
 const Photos = lazy(() => import("./apps/Photos/index.js"));
+const Spotify = lazy(() => import ('./apps/Spotify/index.js'))
 const Settings = lazy(() => import("./apps/Settings/index.js"));
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
             <Route exact path="/twitter" component={Twitter} />
             <Route exact path="/github" component={Github} />
             <Route exact path="/photos" component={Photos} />
+            <Route exact path="/spotify" component={Spotify} />
             <Route exact path="/settings" component={Settings} />
           </Switch>
         </Suspense>

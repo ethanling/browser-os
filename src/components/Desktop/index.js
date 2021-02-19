@@ -1,6 +1,5 @@
-import Menubar from './Menubar/index.js'
-import Window from './Window/index.js'
-import Dock from './Dock/index.js'
+import Menubar from '../Menubar/index.js'
+import Dock from '../Dock/index.js'
 
 export default function Desktop({ config, children }) {
     

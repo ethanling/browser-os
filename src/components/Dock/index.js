@@ -11,6 +11,11 @@ export default function Dock() {
                 iconSize={iconSize}
             />
             <DockIcon
+                bgColor="bg-green-400"
+                name="Spotify"
+                iconSize={iconSize}
+            />
+            <DockIcon
                 bgColor="bg-blue-400"
                 name="Twitter"
                 iconSize={iconSize}
@@ -26,7 +31,7 @@ export default function Dock() {
                 iconSize={iconSize}
             />
             <DockIcon
-                bgColor="bg-green-600"
+                bgColor="bg-gray-600"
                 name="Settings"
                 iconSize={iconSize}
             />
