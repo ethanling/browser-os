@@ -20,12 +20,12 @@ export default function App() {
                 <Desktop>
                     <Suspense fallback={<LoadingView />}>
                         <Switch>
-                            <Route exact path="/" component={Blank} />
-                            <Route exact path="/about" component={About} />
-                            <Route exact path="/twitter" component={Twitter} />
-                            <Route exact path="/github" component={Github} />
-                            <Route exact path="/photos" component={Photos} />
-                            <Route exact path="/spotify" component={Spotify} />
+                            <Route exact path="/browser-os/" component={Blank} />
+                            <Route exact path="/browser-os/about" component={About} />
+                            <Route exact path="/browser-os/twitter" component={Twitter} />
+                            <Route exact path="/browser-os/github" component={Github} />
+                            <Route exact path="/browser-os/photos" component={Photos} />
+                            <Route exact path="/browser-os/spotify" component={Spotify} />
                             <Route
                                 exact
                                 path="/settings"
