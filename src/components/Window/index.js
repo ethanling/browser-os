@@ -9,6 +9,8 @@ import Titlebar from "./Titlebar";
 // titleBarShown: boolean, Option to hide Titlebar. Default: true
 // width: String, Option to change window width on render. Default: 9/12
 // dark: Boolean, Option for dark window background, Default: false 
+
+
 export default function Window({ title, children, titleBarShown, width, dark }) {
     const [windowWidth, setWindowWidth] = useState("9/12")
     const dragControls = useDragControls();
