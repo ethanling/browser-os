@@ -1,0 +1,1 @@
+{"version":3,"sources":["apps/Github/index.js"],"names":["Github","className"],"mappings":"2JAAe,SAASA,IACtB,OACE,qBAAKC,UAAU,OAAf","file":"static/js/8.c76f6524.chunk.js","sourcesContent":["export default function Github() {\n  return (\n    <div className=\"flex\">Github</div>\n  )\n}\n"],"sourceRoot":""}

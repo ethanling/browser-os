@@ -1,0 +1,1 @@
+{"version":3,"sources":["apps/Settings/index.js"],"names":["Settings"],"mappings":"4JAAe,SAASA,IACtB,OACE","file":"static/js/10.a697b990.chunk.js","sourcesContent":["export default function Settings() {\n  return (\n    <div>Settings</div>\n  )\n}\n"],"sourceRoot":""}

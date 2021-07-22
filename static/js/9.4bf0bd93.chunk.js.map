@@ -1,0 +1,1 @@
+{"version":3,"sources":["apps/Photos/index.js"],"names":["Photos"],"mappings":"2JAAe,SAASA,IACtB,OACE","file":"static/js/9.4bf0bd93.chunk.js","sourcesContent":["export default function Photos() {\n  return (\n    <div>Photos</div>\n  )\n}\n"],"sourceRoot":""}
